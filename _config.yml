@@ -1,11 +1,11 @@
 # Site settings
 title: 最佳先生
-SEOTitle: 楠迪的博客
+SEOTitle: 最佳先生的博客
 header-img: img/post-bg-desk.jpg
 email: shinandi@126.com
 description: "Hello Sunny"
 keyword: ""
-url: "http://Nandyshi.github.io"          # your host, for absolute URL
+url: "https://Nandyshi.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/NandyShi/NandyShi.github.io.git" # you code repository
 
@@ -18,7 +18,7 @@ sidebar-avatar: /img/pic.jpg      # use absolute URL, seeing it's used in both `
 
 # SNS settings
 RSS: false
-# weibo_username:     qiubaiying
+# weibo_username:     
 zhihu_username:     NandyShi
 github_username:   NandyShi
 facebook_username:  NandyShi
@@ -108,7 +108,7 @@ friends: [
         title: "Invault",
         href: "https://www.invault.io/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "",
+        href: ""
     }
 ]
