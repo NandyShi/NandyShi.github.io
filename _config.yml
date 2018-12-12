@@ -1,7 +1,7 @@
 # Site settings
 title: 最佳先生
 SEOTitle: 最佳先生的博客
-header-img: img/post-bg-desk.jpg
+header-img: /img/post-bg-desk.jpg
 email: shinandi@126.com
 description: "Hello Sunny"
 keyword: ""
