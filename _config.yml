@@ -19,7 +19,7 @@ sidebar-avatar: /img/pic.jpg      # use absolute URL, seeing it's used in both `
 # SNS settings
 RSS: false
 # weibo_username:   
-reddit_username:  NandyShi
+#reddit_username:  NandyShi
 zhihu_username:   NandyShi  
 github_username:   NandyShi
 facebook_username:  NandyShi
