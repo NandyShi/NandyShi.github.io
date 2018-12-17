@@ -8,7 +8,7 @@ header-img: img/post-bg-universe.jpg
 catalog: true
 tags:
     - ETH
-	- 术语
+    - 术语
 ---
 #以太坊术语解释(持久维护)
 **EVM**：Ethereum Virtual Machine，以太坊虚拟机，这是一个隔离的轻量级的VM，运行在其中的智能合约代码无法访问本地网络、文件系统和其他进程；
