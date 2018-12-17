@@ -47,11 +47,7 @@ tags:
 **ERC20**: 可以理解成 Ethereum 的一个 Token 协议规范，所有基于 Ethereum 开发的 Token 合约都遵守这个规范。遵守 ERC20 协议规范的 Token 可以被各种 Ethereum 钱包支持。[ERC20 Token Standard](https://theethereum.wiki/w/index.php/Main_Page "ERC20 Token Standard")；
 
 **Address**: 地址的合法校验参考 [EIP-55 规范](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-55.md "EIP-55 规范")；
-### 参考
+## 参考
 
 - [精通比特币第二版](https://github.com/bitcoinbook/bitcoinbook)
 - [比特币开发指南](https://bitcoin.org/en/developer-guide)
-
- 
-
-
