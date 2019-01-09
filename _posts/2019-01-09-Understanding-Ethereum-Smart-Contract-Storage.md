@@ -15,7 +15,7 @@ tags:
 
 Ethereum smart contracts use an uncommon storage model that often confuses new developers. In this post, I’ll describe that storage model and explain how the Solidity programming language makes use of it.
 
-##One Astronomically Large Array
+## One Astronomically Large Array
 Each smart contract running in the Ethereum Virtual Machine (EVM) maintains state in its own permanent storage. This storage can be thought of as a very large array, initially full of zeros. Each value in the array is 32-bytes wide, and there are 2256 such values. A smart contract can read from or write to a value at any location. That’s the extent of the storage interface.
 ![](https://i.loli.net/2019/01/09/5c359a7f05d7d.jpg)
  
@@ -23,7 +23,7 @@ I encourage you to stick with the “astronomically large array” mental model,
 
 Because zeros don’t take up any space, storage can be reclaimed by setting a value to zero. This is incentivized in smart contracts with a gas refund when you change a value to zero.
 
-##Locating Fixed-Sized Values
+## Locating Fixed-Sized Values
 In this storage model, where do things actually go? For known variables with fixed sizes, it makes sense to just give them reserved locations in storage. The Solidity programming language does just that.
 ```
 contract StorageTest {
@@ -54,7 +54,7 @@ This is unnecessary due to the astronomical scale of smart contract storage. The
 
 Of course, choosing locations at random wouldn’t be very helpful, because you would have no way to find the data again. Solidity instead uses a hash function to uniformly and repeatably compute locations for dynamically-sized values.
 
-##Dynamically-Sized Arrays
+## Dynamically-Sized Arrays
 A dynamically-sized array needs a place to store its size as well as its elements.
 ```
 contract StorageTest {
@@ -81,7 +81,7 @@ function arrLocation(uint256 slot, uint256 index, uint256 elementSize)
     return uint256(keccak256(slot)) + (index * elementSize);
 }
 ```
-##Mappings
+## Mappings
 A mapping requires an efficient way to find the location corresponding to a given key. Hashing the key is a good start, but care must be taken to make sure different mappings generate different locations.
 ```
 contract StorageTest {
@@ -112,7 +112,7 @@ function mapLocation(uint256 slot, uint256 key) public pure returns (uint256) {
 ```
 Note that when keccak256 is called with multiple parameters, the parameters are concatenated together before hashing. Because the slot and key are both inputs to the hash function, there aren’t collisions between different mappings.
 
-##Combinations of Complex Types
+## Combinations of Complex Types
 Dynamically-sized arrays and mappings can be nested within each other recursively. When that happens, the location of a value is found by recursively applying the calculations defined above. This sounds more complex than it is.
 ```
 contract StorageTest {
@@ -148,7 +148,7 @@ mapLoc = arrLocation(9, 2, 1);  // h is at slot 9
 // then find map[456]
 itemLoc = mapLocation(mapLoc, 456);
 ```
-##Summary
+## Summary
 - Each smart contract has storage in the form of an array of 2256 32-byte values, all initialized to zero.
 - Zeros are not explicitly stored, so setting a value to zero reclaims that storage.
 - Solidity locates fixed-size values at reserved locations called slots, starting at slot 0.
@@ -156,7 +156,7 @@ itemLoc = mapLocation(mapLoc, 456);
 The following table shows how storage locations are computed for different types. The “slot” refers to the next available slot when the state variable is encountered at compile time, and a dot indicates binary concatenation:
 ![](https://i.loli.net/2019/01/09/5c35a3bec8bc0.jpg)
 
-##Further Reading
+## Further Reading
 If you’d like to learn more, I recommend the following resources:
 
 The Solidity documentation covers the [layout of state variables in storage](https://solidity.readthedocs.io/en/v0.4.20/miscellaneous.html#layout-of-state-variables-in-storage "layout of state variables in storage").
