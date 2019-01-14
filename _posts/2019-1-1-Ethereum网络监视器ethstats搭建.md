@@ -11,14 +11,14 @@ tags:
 ---
 
 
-#Ethereum 网络监视器 ethstats 搭建
+# Ethereum 网络监视器 ethstats 搭建
 
 
 ethstats 提供了一个 Web-based 的状态监视器，可以通过节点端获取ETH网络节点的状态，來查看整个区块链的状态。本文将说明如何在linux中安装ethstats。
 
 首先可以访问官方的 https://ethstats.net/ 查看主网节点的状态
 
-##安裝步骤
+## 安裝步骤
 
 本部分说明如何正确安装 eth-netstats服务，包含以下两个部分：
 
@@ -26,15 +26,15 @@ ethstats 提供了一个 Web-based 的状态监视器，可以通过节点端获
 - Client side
 
 
-###Monitoring site
+### Monitoring site
 
-####安裝使用到的相关工具：
+#### 安裝使用到的相关工具：
 
 以ubuntu为例：（centos 或其他系统自行安装）
 $ sudo apt-get install -y make g++ git
 $ sudo apt-get install nodejs
 
-####启动eth-netstats
+#### 启动eth-netstats
 
 $ git clone https://github.com/cubedro/eth-netstats
 $ cd eth-netstats
@@ -63,16 +63,16 @@ $ ./eth-netstats.sh
 >Starting private eth-netstats ...
 
 
-###Client side
+### Client side
 
-####安裝 要使用到的工具：
+#### 安裝要使用到的工具：
 
 ```
 $ sudo apt-get install -y make g++ git
 $ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 $ sudo apt-get install nodejs
 ```
-####安装eth-net-intelligence-api
+#### 安装eth-net-intelligence-api
 
 ```
 $ git clone https://github.com/cubedro/eth-net-intelligence-api
@@ -80,7 +80,7 @@ $ cd eth-net-intelligence-api
 $ sudo npm install && sudo npm install -g pm2
 ```
 
-####编辑app.json，粘贴以下內容：
+#### 编辑app.json，粘贴以下內容：
 
 ```
 [
@@ -130,7 +130,7 @@ INSTANCE_NAME： ethereum 实例名称。
 WS_SERVER： eth-netstats 的 URL。
 WS_SECRET： eth-netstats 的 secret。
 
-####启动服务：
+#### 启动服务：
 
 ```
 $ pm2 start app.json
