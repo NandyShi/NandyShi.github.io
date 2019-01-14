@@ -31,18 +31,20 @@ ethstats 提供了一个 Web-based 的状态监视器，可以通过节点端获
 #### 安裝使用到的相关工具：
 
 以ubuntu为例：（centos 或其他系统自行安装）
+```
 $ sudo apt-get install -y make g++ git
 $ sudo apt-get install nodejs
+```
 
 #### 启动eth-netstats
-
+```
 $ git clone https://github.com/cubedro/eth-netstats
 $ cd eth-netstats
 $ sudo npm install
 $ sudo npm install -g grunt-cli
 $ grunt
 $ PORT="3000" WS_SECRET="admin" npm start
-
+```
 在沒有任何 Clinet节点连上情況下，访问http://yourIP:3000 会看到空白网页。
 
 也可以通过脚本eth-netstats.sh放置到后台执行：
@@ -124,11 +126,11 @@ $ sudo npm install && sudo npm install -g pm2
   }
 ]
 ```
-RPC_HOST： ethereum 的 rpc ip address。
-RPC_PORT： ethereum 的 rpc port。
-INSTANCE_NAME： ethereum 实例名称。
-WS_SERVER： eth-netstats 的 URL。
-WS_SECRET： eth-netstats 的 secret。
+- RPC_HOST： ethereum 的 rpc ip address。
+- RPC_PORT： ethereum 的 rpc port。
+- INSTANCE_NAME： ethereum 实例名称。
+- WS_SERVER： eth-netstats 的 URL。
+- WS_SECRET： eth-netstats 的 secret。
 
 #### 启动服务：
 
