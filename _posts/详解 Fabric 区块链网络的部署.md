@@ -1,0 +1,96 @@
+# 详解 Fabric 区块链网络的部署（转）
+> 系列内容：此内容是该系列 3 部分中的第 1 部分： Hyperledger Fabric 实践与分析
+## 前言
+区块链（Blockchain）技术正在迅速发展，在银行、保险、物流、新闻出版、食品安全等很多领域都开始了实际应用。可以预见，将来会有越来越多的行业会应用它。Hyperledger Fabric 是其中一个非常重要的区块链技术平台。它是一个开源的、企业级的、有许可的分布式账本技术平台，它是为用于企业环境而设计的，与一些其他流行的分布式账本技术或区块链平台相比，它提供了一些非常关键的差异化的能力。本系列文章从 Fabric 实践入手，对之进行学习与研究，进而进行基于 Fabric 的区块链应用开发，再深入研究它的数据结构、源代码与安全机制。期望能通过此系列文章，使读者能快速了解它的全貌。本文是此系列文章的第一篇。主要内容是分步骤讲解如何部署一个示例的 Fabric 区块链网络，并初步了解 Fabric 中的一些基础内容。本文以 Fabric 1.3 为基础。 
+## 系统环境
+Fabric 可以被部署在 Linux，Unix，Windows，MacOS 等系统上，本文以 Ubuntu 16.04 为基础进行讲解，读者如需了解其他系统上的使用情况，请参考[Fabric 原始文档](https://hyperledger-fabric.readthedocs.io/en/latest/index.html)。我们需要先行安装这些软件：
+
+```
+curl，docker，docker-compose，Go lang，Python，Node.js
+```
+有些软件如果在系统中已经存在，且版本合适，则请略过相关步骤。<u>**如无特殊说明，下文中所有命令都以 root 用户执行**</u>。如果为非 root 用户，可能有些命令需要加 sudo.
+### 安装curl
+```
+yum install curl
+```
+### 安装 docker 17.06.2-ce +版本
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu
+$(lsb_release -cs) stable"
+apt update
+apt install docker-ce
+usermod -aG docker $(whoami)
+docker --version
+```
+
+### 安装 docker-compose 1.14.0 +版本
+```
+curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
+### 安装 Go 语言 1.11.x 版本
+#### 下载解压文件包
+```
+curl -O https://dl.google.com/go/go1.11.2.linux-amd64.tar.gz
+tar -C /usr/local -xzf go1.11.2.linux-amd64.tar.gz
+```
+#### 设置 Go 语言环境变量
+```
+vi ~/.bashrc
+```
+在.bashrc 文件中增加以下内容
+```
+export PATH=$PATH:/usr/local/go/bin
+```
+执行 .bashrc 文件，使之生效
+```
+source ~/.bashrc
+```
+
+### 安装 Node.js 8.9.x 或更高版本
+> 请注意 Fabric 目前不支持 Node.js 9.x 版本。
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -apt install nodejs
+```
+安装 Node.js 后，npm 应该被同时自动安装，执行以下命令确认。
+```
+npm install npm -g
+```
+###  安装 Python 2.7
+yum install python
+
+### 下载 fabric 可执行文件、示例与 docker 镜像
+```
+cd ~ 
+mkdir fabric
+cd fabric
+curl -sSL http://bit.ly/2ysbOFE | bash -s 1.3.0
+```
+如果提示错误，请尝试使用https：
+```
+curl -sSL https://bit.ly/2ysbOFE | bash -s 1.3.0
+```
+下载、安装成功后，当前目录下会增加一个 fabric-samples 目录。 并在 docker repository 中会增加一些 docker 镜像。可以通过 docker images 命令查看。
+```
+docker images
+```
+显示的结果为
+![](https://i.loli.net/2019/02/22/5c6f8063063ad.png)
+
+
+将 Fabric 可执行文件目录加入系统路径
+```
+vi ~/.bashrc
+```
+在.bashrc 文件中增加以下内容：
+```
+export PATH=$PATH:~/fabric/fabric-samples/bin
+```
+执行.bashrc 文件，使之生效。
+```
+source ~/.bashrc
+```
+现在，Fabric 必需的系统环境与软件就全部准备好了，我们就要开始下载、部署第一个 Fabric 区块链网络了。
+
