@@ -2,7 +2,7 @@
 layout:     post
 title:      Ethereum 网络监视器 ethstats 搭建
 subtitle:   
-date:       2019-1-1
+date:       2019-01-01
 author:     NandyShi
 header-img: img/post-bg-universe.jpg
 catalog: true
