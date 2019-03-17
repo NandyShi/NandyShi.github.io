@@ -1,7 +1,7 @@
 
 ---
 layout:     post
-title:      centos7 安装 Hyperledger fabric 1.4.0
+title:      centos7-安装-Hyperledger-fabric-1.4.0
 subtitle:   
 date:       2019-03-17
 author:     NandyShi
