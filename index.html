@@ -1,58 +1,55 @@
 
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上海翼帆数展科技有限公司 - 数字展示解决方案专家</title>
+    <title>上海翼帆数展科技 - 数据要素共享与智能体开发专家</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
         }
-        .card-hover {
+        .sector-card {
             transition: all 0.3s ease;
+            border-left: 4px solid transparent;
         }
-        .card-hover:hover {
+        .sector-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-left-color: #2563eb;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
         }
-        .nav-link {
-            position: relative;
-        }
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover:after {
-            width: 100%;
+        .tech-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(37, 99, 235, 0.1);
+            color: #2563eb;
+            font-size: 24px;
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
     <!-- 导航栏 -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
+        <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
                     <img src="https://picsum.photos/50/50?random=1" alt="翼帆数展公司logo" class="h-10 mr-3">
-                    <span class="text-xl font-bold text-blue-600">翼帆数展</span>
+                    <span class="text-xl font-bold text-blue-600">翼帆数展科技</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">首页</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">关于我们</a>
-                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600">服务项目</a>
-                    <a href="#cases" class="nav-link text-gray-700 hover:text-blue-600">成功案例</a>
-                    <a href="#team" class="nav-link text-gray-700 hover:text-blue-600">团队介绍</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">联系我们</a>
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">关于我们</a>
+                    <a href="#solutions" class="text-gray-700 hover:text-blue-600 font-medium">解决方案</a>
+                    <a href="#sectors" class="text-gray-700 hover:text-blue-600 font-medium">行业服务</a>
+                    <a href="#tech" class="text-gray-700 hover:text-blue-600 font-medium">技术能力</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">联系我们</a>
                 </div>
                 <div class="md:hidden">
                     <button class="text-gray-500 focus:outline-none">
@@ -64,19 +61,19 @@
     </nav>
 
     <!-- 英雄区域 -->
-    <section id="home" class="hero-gradient text-white py-20">
+    <section id="home" class="hero-gradient text-white py-24">
         <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">数字展示创新解决方案</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">上海翼帆数展科技有限公司 - 专业数字化展示与互动体验服务提供商</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">数据要素安全流通与智能体开发</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">赋能数据要素市场化配置，构建安全可信的数据流通基础设施</p>
             <div class="flex justify-center space-x-4">
-                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">联系我们</a>
-                <a href="#cases" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">查看案例</a>
+                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">商务合作</a>
+                <a href="#solutions" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">解决方案</a>
             </div>
         </div>
     </section>
 
     <!-- 关于我们 -->
-    <section id="about" class="py-16 bg-gray-50">
+    <section id="about" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">关于翼帆数展</h2>
@@ -84,26 +81,26 @@
             </div>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
-                    <img src="https://picsum.photos/600/400?random=2" alt="公司办公环境" class="rounded-lg shadow-xl">
+                    <img src="https://picsum.photos/600/400?random=2" alt="公司团队工作场景" class="rounded-lg shadow-xl">
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">专业数字化展示解决方案提供商</h3>
-                    <p class="text-gray-600 mb-4">上海翼帆数展科技有限公司成立于2015年，专注于数字化展示与互动体验技术的研发与应用。我们致力于通过创新的数字技术，为客户提供全方位的展示解决方案。</p>
-                    <p class="text-gray-600 mb-6">公司拥有专业的技术团队和丰富的行业经验，服务领域涵盖展览展示、博物馆、企业展厅、商业空间等多个领域，已成功为200+客户提供优质服务。</p>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">数据要素流通技术引领者</h3>
+                    <p class="text-gray-600 mb-4">上海翼帆数展科技有限公司是国内领先的数据要素共享开放与智能体开发服务商，专注于构建安全可信的数据流通基础设施。</p>
+                    <p class="text-gray-600 mb-6">公司自主研发的数据要素流通平台和智能体开发框架，已成功应用于政务、金融、医疗、交通等多个关键领域，为数据要素市场化配置提供技术保障。</p>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="bg-gray-50 p-4 rounded-lg">
                             <div class="text-blue-600 text-2xl mb-2">
-                                <i class="fas fa-medal"></i>
+                                <i class="fas fa-database"></i>
                             </div>
-                            <h4 class="font-semibold mb-1">行业领先</h4>
-                            <p class="text-sm text-gray-600">数字化展示行业标杆企业</p>
+                            <h4 class="font-semibold mb-1">数据要素流通</h4>
+                            <p class="text-sm text-gray-600">安全可信的数据共享技术</p>
                         </div>
-                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                        <div class="bg-gray-50 p-4 rounded-lg">
                             <div class="text-blue-600 text-2xl mb-2">
-                                <i class="fas fa-users"></i>
+                                <i class="fas fa-robot"></i>
                             </div>
-                            <h4 class="font-semibold mb-1">专业团队</h4>
-                            <p class="text-sm text-gray-60">50+专业技术人才</p>
+                            <h4 class="font-semibold mb-1">智能体开发</h4>
+                            <p class="text-sm text-gray-600">行业智能决策解决方案</p>
                         </div>
                     </div>
                 </div>
@@ -111,151 +108,182 @@
         </div>
     </section>
 
-    <!-- 服务项目 -->
-    <section id="services" class="py-16">
+    <!-- 解决方案 -->
+    <section id="solutions" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">我们的服务</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">核心解决方案</h2>
                 <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们提供全方位的数字化展示解决方案，满足不同场景的需求</p>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们提供全方位的数据要素流通与智能体开发解决方案</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
-                        <i class="fas fa-vr-cardboard"></i>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">虚拟现实展示</h3>
-                    <p class="text-gray-600">通过VR技术打造沉浸式体验，让观众身临其境地感受展示内容，适用于产品展示、场景还原等多种场景。</p>
+                    <h3 class="text-xl font-semibold mb-3">数据安全流通平台</h3>
+                    <p class="text-gray-600">基于隐私计算和区块链技术，构建安全可信的数据要素流通基础设施，实现数据"可用不可见"。</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
-                        <i class="fas fa-touchscreen"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">互动多媒体</h3>
-                    <p class="text-gray-600">结合触摸屏、体感交互等技术，打造趣味性强、参与度高的互动展示系统，提升观众参与感。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="tech-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">数字沙盘</h3>
-                    <p class="text-gray-600">将传统沙盘与数字技术结合，实现动态展示、多维度分析，适用于城市规划、地产展示等领域。</p>
+                    <h3 class="text-xl font-semibold mb-3">数据要素市场系统</h3>
+                    <p class="text-gray-600">提供数据确权、定价、交易全流程技术支持，促进数据要素市场化配置。</p>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
-                        <i class="fas fa-photo-film"></i>
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3 class="text-xl font-semibold mb-3">数字内容制作</h3>
-                    <p class="text-gray-600">专业团队提供3D建模、动画制作、特效视频等数字内容创作服务，为展示提供优质素材。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">智慧展厅设计</h3>
-                    <p class="text-gray-600">整合多种数字技术，打造智能化、现代化的企业展厅，提升品牌形象和展示效果。</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
-                    <div class="text-blue-600 text-4xl mb-4">
-                        <i class="fas fa-mobile-screen"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">移动端应用</h3>
-                    <p class="text-gray-600">开发配套移动应用，实现展前预览、展中互动、展后回顾的全流程体验。</p>
+                    <h3 class="text-xl font-semibold mb-3">行业智能体开发</h3>
+                    <p class="text-gray-600">面向政务、金融、医疗等行业开发专业智能体，提升数据驱动的智能决策能力。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 成功案例 -->
-    <section id="cases" class="py-16 bg-gray-50">
+    <!-- 行业服务 -->
+    <section id="sectors" class="py-16 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">成功案例</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">行业服务场景</h2>
                 <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们为各行业客户提供了专业的数字化展示解决方案</p>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们在多个关键领域提供数据安全流通解决方案</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=3" alt="上海科技馆数字展厅项目" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">上海科技馆数字展厅</h3>
-                        <p class="text-gray-600 text-sm mb-4">通过VR、AR等技术打造沉浸式科普体验，日均接待观众2000+人次</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">博物馆</span>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="sector-card bg-white p-6 rounded-lg border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-landmark"></i>
                     </div>
+                    <h3 class="text-lg font-semibold mb-2">政务数据共享</h3>
+                    <p class="text-gray-600 text-sm">实现跨部门政务数据安全共享，提升政府治理效能。</p>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=4" alt="某汽车品牌互动展示系统" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">某汽车品牌互动展示系统</h3>
-                        <p class="text-gray-600 text-sm mb-4">开发多点触控互动系统，实现产品360°展示与配置体验</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">汽车</span>
+                <div class="sector-card bg-white p-6 rounded-lg border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-piggy-bank"></i>
                     </div>
+                    <h3 class="text-lg font-semibold mb-2">金融风控</h3>
+                    <p class="text-gray-600 text-sm">金融机构间数据合规共享，提升反欺诈和风控能力。</p>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=5" alt="城市规划数字沙盘" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">城市规划数字沙盘</h3>
-                        <p class="text-gray-600 text-sm mb-4">为某城市规划馆定制开发交互式数字沙盘，展示城市发展蓝图</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">政府</span>
+                <div class="sector-card bg-white p-6 rounded-lg border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
+                    <h3 class="text-lg font-semibold mb-2">医疗健康</h3>
+                    <p class="text-gray-600 text-sm">医疗数据隐私保护下的科研和临床价值挖掘。</p>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=6" alt="某地产项目VR样板间" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">某地产项目VR样板间</h3>
-                        <p class="text-gray-600 text-sm mb-4">开发VR看房系统，实现远程沉浸式看房体验</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">地产</span>
+                <div class="sector-card bg-white p-6 rounded-lg border border-gray-100">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-traffic-light"></i>
                     </div>
+                    <h3 class="text-lg font-semibold mb-2">智慧交通</h3>
+                    <p class="text-gray-600 text-sm">交通数据融合分析，优化城市交通管理和规划。</p>
                 </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=7" alt="企业智慧展厅" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">企业智慧展厅</h3>
-                        <p class="text-gray-600 text-sm mb-4">为某500强企业打造数字化企业展厅，展示企业发展历程与成果</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">企业</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-                    <img src="https://picsum.photos/600/400?random=8" alt="文化主题展览" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">文化主题展览</h3>
-                        <p class="text-gray-600 text-sm mb-4">运用多媒体技术生动展示传统文化，吸引年轻观众群体</p>
-                        <span class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">文化</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-10">
-                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">查看更多案例</a>
             </div>
         </div>
     </section>
 
-    <!-- 团队介绍 -->
-    <section id="team" class="py-16">
+    <!-- 技术能力 -->
+    <section id="tech" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">专业团队</h2>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">核心技术能力</h2>
                 <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
-                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们拥有一支技术精湛、经验丰富的专业团队</p>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">我们掌握数据要素流通与智能体开发的关键技术</p>
             </div>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <img src="https://picsum.photos/200/200?random=9" alt="技术总监张明" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-semibold">张明</h3>
-                    <p class="text-blue-600 mb-2">技术总监</p>
-                    <p class="text-gray-600 text-sm">10年数字展示行业经验，精通各类互动技术开发</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">隐私计算技术</h3>
+                    <p class="text-gray-600">支持多方安全计算、联邦学习、可信执行环境等多种隐私计算模式，保障数据流通安全。</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://picsum.photos/200/200?random=10" alt="设计总监李娜" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-semibold">李娜</h3>
-                    <p class="text-blue-600 mb-2">设计总监</p>
-                    <p class="text-gray-600 text-sm">资深视觉设计师，擅长用户体验与交互设计</p>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">区块链存证</h3>
+                    <p class="text-gray-600">基于区块链实现数据确权、交易存证和智能合约，构建可信数据流通环境。</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://picsum.photos/200/200?random=11" alt="项目经理王强" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
-                    <h3 class="text-xl font-semibold">王强</h3>
-                    <p class="text-blue-600 mb-2">项目经理</p>
-                    <p class="text-gray-600 text-sm">PMP认证，管理过50+大型数字展示项目</p>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">数据要素市场技术</h3>
+                    <p class="text-gray-600">提供数据资产登记、价值评估、交易撮合等全流程技术支持。</p>
                 </div>
-                <div class="text-center">
-                    <img src="https://pics
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">行业智能体开发</h3>
+                    <p class="text-gray-600">结合行业知识图谱和多模态大模型，开发专业领域智能决策系统。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">数据安全治理</h3>
+                    <p class="text-gray-600">提供数据分级分类、脱敏加密、访问控制等全方位安全治理方案。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-3 text-blue-600">系统集成能力</h3>
+                    <p class="text-gray-600">与现有业务系统无缝集成，实现数据要素流通的平滑落地。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">欢迎咨询数据要素流通与智能体开发解决方案</p>
+            </div>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">联系方式</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">公司地址</h4>
+                                    <p class="text-gray-600">上海市浦东新区张江高科技园区</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">联系电话</h4>
+                                    <p class="text-gray-600">021-50801234</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mr-4 mt-1">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium">电子邮箱</h4>
+                                    <p class="text-gray-600">contact@tds.hk</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-6">商务合作咨询</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1">公司名称</label>
+                                <input type="text" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">联系电话</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">咨询内容</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">提交咨询</button>
+                        </div>
+                    </form>
+                </div
